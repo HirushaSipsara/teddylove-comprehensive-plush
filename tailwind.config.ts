@@ -61,6 +61,31 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// TeddyLove brand colors
+				teddy: {
+					50: 'hsl(var(--teddy-50))',
+					100: 'hsl(var(--teddy-100))',
+					200: 'hsl(var(--teddy-200))',
+					300: 'hsl(var(--teddy-300))',
+					400: 'hsl(var(--teddy-400))',
+					500: 'hsl(var(--teddy-500))',
+					600: 'hsl(var(--teddy-600))',
+					700: 'hsl(var(--teddy-700))',
+					800: 'hsl(var(--teddy-800))',
+					900: 'hsl(var(--teddy-900))',
+				},
+				pink: {
+					50: 'hsl(var(--pink-50))',
+					100: 'hsl(var(--pink-100))',
+					200: 'hsl(var(--pink-200))',
+					300: 'hsl(var(--pink-300))',
+					400: 'hsl(var(--pink-400))',
+					500: 'hsl(var(--pink-500))',
+					600: 'hsl(var(--pink-600))',
+					700: 'hsl(var(--pink-700))',
+					800: 'hsl(var(--pink-800))',
+					900: 'hsl(var(--pink-900))',
 				}
 			},
 			borderRadius: {

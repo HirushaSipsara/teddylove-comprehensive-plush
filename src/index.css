@@ -8,51 +8,83 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Base colors for warm, cozy teddy bear theme */
+    --background: 35 25% 98%;
+    --foreground: 25 15% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 35 30% 96%;
+    --card-foreground: 25 15% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 35 30% 96%;
+    --popover-foreground: 25 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* TeddyLove primary - warm brown */
+    --primary: 25 35% 25%;
+    --primary-foreground: 35 25% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Soft pink secondary */
+    --secondary: 340 25% 85%;
+    --secondary-foreground: 25 35% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 35 20% 90%;
+    --muted-foreground: 25 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 340 30% 88%;
+    --accent-foreground: 25 35% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 35 15% 85%;
+    --input: 35 15% 85%;
+    --ring: 25 35% 25%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* TeddyLove brand color palette */
+    --teddy-50: 35 40% 96%;
+    --teddy-100: 35 35% 92%;
+    --teddy-200: 30 30% 85%;
+    --teddy-300: 28 28% 75%;
+    --teddy-400: 26 30% 65%;
+    --teddy-500: 25 35% 55%;
+    --teddy-600: 25 35% 45%;
+    --teddy-700: 25 35% 35%;
+    --teddy-800: 25 35% 25%;
+    --teddy-900: 25 35% 15%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Soft pink accents */
+    --pink-50: 340 50% 96%;
+    --pink-100: 340 45% 92%;
+    --pink-200: 340 40% 88%;
+    --pink-300: 340 35% 82%;
+    --pink-400: 340 30% 75%;
+    --pink-500: 340 25% 68%;
+    --pink-600: 340 25% 60%;
+    --pink-700: 340 25% 52%;
+    --pink-800: 340 25% 44%;
+    --pink-900: 340 25% 36%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--teddy-600)), hsl(var(--teddy-700)));
+    --gradient-soft: linear-gradient(135deg, hsl(var(--pink-100)), hsl(var(--teddy-100)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--teddy-500)), hsl(var(--pink-400)));
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    /* Shadows */
+    --shadow-warm: 0 4px 20px hsl(var(--teddy-300) / 0.15);
+    --shadow-soft: 0 2px 10px hsl(var(--pink-300) / 0.1);
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    /* Animations */
+    --transition-gentle: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 35 30% 96%;
+    --sidebar-foreground: 25 15% 25%;
+    --sidebar-primary: 25 35% 25%;
+    --sidebar-primary-foreground: 35 25% 98%;
+    --sidebar-accent: 340 25% 90%;
+    --sidebar-accent-foreground: 25 35% 25%;
+    --sidebar-border: 35 15% 85%;
+    --sidebar-ring: 25 35% 25%;
   }
 
   .dark {
