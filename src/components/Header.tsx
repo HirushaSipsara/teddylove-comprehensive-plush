@@ -9,7 +9,12 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 
-export function Header({ onCartClick, onSearchClick }) {
+interface HeaderProps {
+  onCartClick: () => void;
+  onSearchClick: () => void;
+}
+
+export function Header({ onCartClick, onSearchClick }: HeaderProps) {
   const { cart, currentUser, setCurrentUser } = useStore();
   const cartItemsCount = cart.reduce((total, item) => total + item.quantity, 0);
 

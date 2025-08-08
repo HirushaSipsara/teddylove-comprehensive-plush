@@ -5,7 +5,12 @@ import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { useStore } from '@/hooks/useStore';
 
-export function Cart({ isOpen, onClose }) {
+interface CartProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export function Cart({ isOpen, onClose }: CartProps) {
   const { cart, updateCartQuantity, removeFromCart, clearCart, getCartTotal } = useStore();
 
   if (!isOpen) return null;
