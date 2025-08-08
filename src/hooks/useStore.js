@@ -1,43 +1,8 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { Product, CartItem, Order } from '@/types/product';
-
-interface StoreState {
-  // Authentication
-  currentUser: 'customer' | 'admin' | 'cashier' | null;
-  setCurrentUser: (user: 'customer' | 'admin' | 'cashier' | null) => void;
-
-  // Products
-  products: Product[];
-  setProducts: (products: Product[]) => void;
-  addProduct: (product: Product) => void;
-  updateProduct: (id: string, updates: Partial<Product>) => void;
-  deleteProduct: (id: string) => void;
-
-  // Cart
-  cart: CartItem[];
-  addToCart: (product: Product, quantity?: number) => void;
-  removeFromCart: (productId: string) => void;
-  updateCartQuantity: (productId: string, quantity: number) => void;
-  clearCart: () => void;
-  getCartTotal: () => number;
-
-  // Orders
-  orders: Order[];
-  addOrder: (order: Order) => void;
-  updateOrderStatus: (orderId: string, status: Order['status']) => void;
-
-  // POS
-  posCart: CartItem[];
-  addToPosCart: (product: Product, quantity?: number) => void;
-  removeFromPosCart: (productId: string) => void;
-  updatePosCartQuantity: (productId: string, quantity: number) => void;
-  clearPosCart: () => void;
-  getPosCartTotal: () => number;
-}
 
 // Mock product data
-const mockProducts: Product[] = [
+const mockProducts = [
   {
     id: '1',
     name: 'Classic Brown Teddy',
@@ -116,7 +81,7 @@ const mockProducts: Product[] = [
   }
 ];
 
-export const useStore = create<StoreState>()(
+export const useStore = create()(
   persist(
     (set, get) => ({
       // Authentication

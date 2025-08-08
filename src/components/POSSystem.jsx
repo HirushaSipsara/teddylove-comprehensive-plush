@@ -21,7 +21,7 @@ export function POSSystem() {
   
   const [searchTerm, setSearchTerm] = useState('');
   const [customerName, setCustomerName] = useState('');
-  const [paymentMethod, setPaymentMethod] = useState<'cash' | 'card'>('card');
+  const [paymentMethod, setPaymentMethod] = useState('card');
   
   const filteredProducts = products.filter(product =>
     product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -39,7 +39,7 @@ export function POSSystem() {
       id: Date.now().toString(),
       items: [...posCart],
       total,
-      status: 'processing' as const,
+      status: 'processing',
       createdAt: new Date(),
       customerName: customerName || 'Walk-in Customer'
     };
