@@ -14,10 +14,10 @@ import {
 
 export function ProductGrid() {
   const { products } = useStore();
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedSize, setSelectedSize] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('name');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedSize, setSelectedSize] = useState('all');
+  const [sortBy, setSortBy] = useState('name');
+  const [viewMode, setViewMode] = useState('grid');
 
   // Get unique categories and sizes
   const categories = ['all', ...Array.from(new Set(products.map(p => p.category)))];
